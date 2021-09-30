@@ -3,7 +3,7 @@
     "path": "C:/Users/USER/Desktop/saikyoupuyo/saikyoupuyo.R",
     "project_path": "saikyoupuyo.R",
     "type": "r_source",
-    "hash": "3677016839",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1632488832970.0,
@@ -17,11 +17,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1633008082,
+    "lastKnownWriteTime": 1633011056,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1633008082738,
+    "last_content_update": 1633011056,
     "read_only": false,
     "read_only_alternatives": []
 }

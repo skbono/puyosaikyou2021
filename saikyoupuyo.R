@@ -64,8 +64,8 @@ stanmodel <- stan_model(file='saikyoupuyo.stan')
 fit <- sampling(stanmodel, 
                 data=data, pars=c('mu','s_mu','s_pf'), 
                 chain = 4,
-                iter = 60,
-                warmup = 2,
+                iter = 6000,
+                warmup = 2000,
                 thin = 3,
                 seed = 1)
 
