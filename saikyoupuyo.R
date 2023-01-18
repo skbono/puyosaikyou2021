@@ -7,9 +7,6 @@ library(readr)
 
 
 
-
-
-
 ############# データ読み込み～データ加工 #####################----------------------------------------------------------
 
 ### データの読み込み（1行1連戦 形式） ###
@@ -41,10 +38,6 @@ puyoWL <- data.frame(L, W)
 
 
 
-
-
-
-
 ############# MCMCの実行まで #####################----------------------------------------------------------
 ### stan用にリスト化 ###
 P <- c(puyoWL$L, puyoWL$W) %>% unique() %>% length()
@@ -64,16 +57,10 @@ stanmodel <- stan_model(file='saikyoupuyo.stan')
 fit <- sampling(stanmodel, 
                 data=data, pars=c('mu','s_mu','s_pf'), 
                 chain = 4,
-                iter = 6000,
-                warmup = 2000,
+                iter = 10000,
+                warmup = 5000,
                 thin = 3,
                 seed = 1)
-
-
-
-
-
-
 
 
 
@@ -92,12 +79,6 @@ mcmc_intervals(fit,
                pars = c("s_pf[2]", "s_pf[6]", "s_pf[4]", "s_pf[5]", "s_pf[1]", "s_pf[3]", "s_pf[8]", "s_pf[7]"),
                prob = 0.5,
                prob_outer = 0.95)
-
-
-
-
-
-
 
 
 
